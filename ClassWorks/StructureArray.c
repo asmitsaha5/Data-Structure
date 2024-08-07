@@ -1,43 +1,38 @@
 #include <stdio.h>
-#include <string.h>
-
-#define MAX_NAME_LENGTH 50
-#define ARRAY_SIZE 3
-
-struct student
+struct employee
 {
-    char name[MAX_NAME_LENGTH];
-    int roll;
-    float CGPA;
+    char fname[20];
+    char lname[20];
+    int empid;
+    int salary;
 };
 
 int main()
 {
-    struct student stu[ARRAY_SIZE];
 
-    for (int i = 0; i < ARRAY_SIZE; i++)
+    int n;
+    printf("Enter the number of employee :");
+    scanf("%d", &n);
+    struct employee emp[n];
+
+    for (int i = 0; i < n; i++)
     {
-        printf("Enter details for student %d:\n", i + 1);
-
-        printf("  Name: ");
-        fgets(stu[i].name, MAX_NAME_LENGTH, stdin);
-        stu[i].name[strcspn(stu[i].name, "\n")] = '\0';
-
-        printf("  ROll: ");
-        scanf("%d", &stu[i].roll);
-
-        printf("  CGPA: ");
-        scanf("%f", &stu[i].CGPA);
-        while (getchar() != '\n')
-            ;
-    }
-    for (int i = 0; i < ARRAY_SIZE; i++)
-    {
-        printf("Student %d:\n", i + 1);
-        printf("  Name: %s\n", stu[i].name);
-        printf("  Roll: %d\n", stu[i].roll);
-        printf("  CGPA: %.1f\n\n", stu[i].CGPA);
+        printf("Enter the details of employee %d\n", i + 1);
+        printf("Enter first name :");
+        scanf("%s", emp[i].fname);
+        printf("Enter last name :");
+        scanf("%s", emp[i].lname);
+        printf("Enter Employee Id :");
+        scanf("%d", &emp[i].empid);
+        printf("Enter salary :");
+        scanf("%d", &emp[i].salary);
     }
 
-    return 0;
+    for (int i = 0; i < n; i++)
+    {
+        printf("Details of employee %d \n", i + 1);
+        printf("Name : %s %s \n", emp[i].fname, emp[i].lname);
+        printf("Employee Id : %d\n", emp[i].empid);
+        printf("Salary : %d\n\n", emp[i].salary);
+    }
 }
