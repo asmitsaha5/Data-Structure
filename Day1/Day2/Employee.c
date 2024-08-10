@@ -5,8 +5,15 @@ struct employee
 {
     char fname[20];
     char lname[20];
+    char designation[20];
+    int basicsalary;
     int empid;
-    int salary;
+};
+struct address
+{
+    char city;
+    char state;
+    int pincode;
 };
 
 int main()
@@ -26,15 +33,23 @@ int main()
         scanf("%s", emp[i].lname);
         printf("Enter Employee Id :");
         scanf("%d", &emp[i].empid);
+        printf("Enter the designation");
+        scanf("%s", emp[i].designation);
         printf("Enter salary :");
-        scanf("%d", &emp[i].salary);
+        scanf("%d", &emp[i].basicsalary);
     }
-
     for (int i = 0; i < n; i++)
     {
         printf("Details of employee %d \n", i + 1);
         printf("Name : %s %s \n", emp[i].fname, emp[i].lname);
         printf("Employee Id : %d\n", emp[i].empid);
-        printf("Salary : %d\n\n", emp[i].salary);
+        printf("Basic Salary : %d\n\n", emp[i].basicsalary);
+        printf("");
+
+        float HRA = emp[i].basicsalary + (emp[i].basicsalary * (15 / 100));
+        float DA = emp[i].basicsalary + (emp[i].basicsalary * (25 / 100));
+        float Grosssalary;
+        Grosssalary = HRA + DA + emp[i].basicsalary;
+        printf("The Gross Salary is %d", Grosssalary);
     }
 }
