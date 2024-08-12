@@ -3,8 +3,7 @@
 
 struct employee
 {
-    char fname[20];
-    char lname[20];
+    char name[20];
     int empid;
     int salary;
 };
@@ -21,9 +20,7 @@ int main()
     {
         printf("Enter the details of employee %d\n", i + 1);
         printf("Enter first name :");
-        scanf("%s", emp[i].fname);
-        printf("Enter last name :");
-        scanf("%s", emp[i].lname);
+        scanf("%s", emp[i].name);
         printf("Enter Employee Id :");
         scanf("%d", &emp[i].empid);
         printf("Enter salary :");
@@ -33,7 +30,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         printf("Details of employee %d \n", i + 1);
-        printf("Name : %s %s \n", emp[i].fname, emp[i].lname);
+        printf("Name : %s %s \n", emp[i].name);
         printf("Employee Id : %d\n", emp[i].empid);
         printf("Salary : %d\n\n", emp[i].salary);
     }
