@@ -1,41 +1,41 @@
 #include <stdio.h>
-
-struct SparseMatrix
-{
-    int row;
-    int col;
-    int value;
-};
-
 int main()
 {
-    int rows, cols, i, j, element, nonZero = 0;
-    struct SparseMatrix sparse[100];
+    int m, n;
+    int i, j, k = 0;
+    int count = 0;
 
-    printf("Enter the number of rows and columns of the matrix: ");
-    scanf("%d %d", &rows, &cols);
-
-    printf("Enter the elements of the matrix:\n");
-    for (i = 0; i < rows; i++)
+    scanf("%d %d", &m, &n);
+    int s[m][n];
+    for (i = 0; i < m; i++)
     {
-        for (j = 0; j < cols; j++)
+        for (j = 0; j < n; j++)
         {
-            scanf("%d", &element);
-            if (element != 0)
-            {
-                sparse[nonZero].row = i;
-                sparse[nonZero].col = j;
-                sparse[nonZero].value = element;
-                nonZero++;
-            }
+            scanf("%d", &s[i][j]);
         }
     }
 
-    printf("\nSparse Matrix  (value, row, column):\n");
-    for (i = 0; i < nonZero; i++)
+    for (i = 0; i < m; i++)
     {
-        printf("%d\t%d\t%d\n", sparse[i].value, sparse[i].row, sparse[i].col);
+        for (j = 0; j < n; j++)
+        {
+            if (s[i][j] != 0)
+                count++;
+        }
     }
-
-    return 0;
+    int E[count][3];
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (s[i][j] != 0)
+            {
+                E[k][0] = s[i][j];
+                E[k][1] = i;
+                E[k][2] = j;
+                printf("%d %d %d\n", E[k][0], E[k][1], E[k][2]);
+                k++;
+            }
+        }
+    }
 }
