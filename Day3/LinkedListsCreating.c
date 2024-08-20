@@ -36,7 +36,7 @@ int main()
         newnode = NULL;
     }
     ptr = head;
-    printf("Elements present in the Linked List : ");
+    printf("Elements present in the Linked List : \n");
     for (i = 0; i < n; i++)
     {
         printf("%d ", ptr->data);
