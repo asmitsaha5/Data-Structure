@@ -40,7 +40,7 @@ int main()
     for (i = 0; i < n; i++)
     {
         printf("%d ", ptr->data);
-        printf("Address of the node %d : %d \n", i + 1, ptr);
+        //printf("Address of the node %d : %d \n", i + 1, ptr);
         ptr = ptr->next;
     }
 }
