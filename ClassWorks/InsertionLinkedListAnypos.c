@@ -51,8 +51,8 @@ int main()
     scanf("%d", &pos);
 
     insertNode = (struct node *)malloc(sizeof(struct node));
-    insertNode->data = 30;
-    insertNode->next = NULL;
+    printf("Enter the value of node to store : ");
+    scanf("%d", &insertNode->data);
 
     if (pos == 0)
     {
@@ -62,7 +62,7 @@ int main()
     else
     {
         temp = head;
-        for (i = 0; i < pos - 1; i++)
+        for (i = 1; i < pos - 1; i++)
         {
             if (temp->next != NULL)
             {
@@ -77,7 +77,7 @@ int main()
     printf("Elements stored in the linked list after insertion: \n");
     for (i = 0; i < n + 1; i++)
     {
-        printf("%d \n", ptr->data);
+        printf("%d ", ptr->data);
         ptr = ptr->next;
     }
 
