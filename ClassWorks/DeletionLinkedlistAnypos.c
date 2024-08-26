@@ -13,12 +13,6 @@ int main()
     printf("Enter the number of elements to store: ");
     scanf("%d", &n);
 
-    if (n <= 0)
-    {
-        printf("The number of elements should be greater than 0.\n");
-        return 0;
-    }
-
     struct node *newnode, *temp, *head, *ptr;
     int data, i;
 
