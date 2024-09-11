@@ -8,7 +8,6 @@ struct node
 };
 
 struct node *top = NULL;
-struct node *tpop = NULL;
 
 int main()
 {
