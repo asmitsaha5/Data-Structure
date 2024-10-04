@@ -93,7 +93,7 @@ void reverse(int k)
 }
 int main()
 {
-    int k = 3;
+    int k = 6;
     enqueue(1);
     enqueue(2);
     enqueue(3);

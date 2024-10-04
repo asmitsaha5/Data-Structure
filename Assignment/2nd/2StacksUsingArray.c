@@ -15,7 +15,7 @@ void push1(int value)
     {
         top1++;
         arr[top1] = value;
-        printf("Pushed %d in Stack1 :\n", value);
+        printf("Pushed %d in Stack1 \n", value);
     }
 }
 void push2(int value)
@@ -28,7 +28,7 @@ void push2(int value)
     {
         top2--;
         arr[top2] = value;
-        printf("Pushed %d in Stack2 :\n", value);
+        printf("Pushed %d in Stack2 \n", value);
     }
 }
 
@@ -62,30 +62,15 @@ int pop2()
 }
 int main()
 {
-    int value;
+    push1(10);
+    push1(200);
 
-    printf("Enter numbers to push to Stack 1 (enter -1 to stop):\n");
-    while (1)
-    {
-        printf("Enter a value: ");
-        scanf("%d", &value);
-        if (value == -1)
-            break;
-        push1(value);
-    }
+    push2(30);
+    push2(400);
 
-    printf("Enter numbers to push to Stack 2 (enter -1 to stop):\n");
-    while (1)
-    {
-        printf("Enter a value: ");
-        scanf("%d", &value);
-        if (value == -1)
-            break;
-        push2(value);
-    }
+    printf("Popped from Stack 1: %d\n", pop1()); 
 
-    printf("Popped from Stack 1: %d\n", pop1());
-    printf("Popped from Stack 2: %d\n", pop2());
-
+    
+    printf("Popped from Stack 2: %d\n", pop2()); 
     return 0;
 }
