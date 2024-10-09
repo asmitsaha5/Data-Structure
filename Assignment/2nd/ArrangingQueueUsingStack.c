@@ -144,8 +144,8 @@ int main()
     enqueue_q1(2);
     enqueue_q1(3);
     enqueue_q1(1);
-    enqueue_q1(4);
     enqueue_q1(5);
+    enqueue_q1(6);
 
     cansort();
 

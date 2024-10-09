@@ -7,7 +7,7 @@ int *arr;
 int *top;
 int stackSize;
 int M;
-
+          
 void initializeTops()
 {
     for (int i = 0; i < M; i++)

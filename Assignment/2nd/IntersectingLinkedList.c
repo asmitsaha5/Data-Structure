@@ -61,15 +61,15 @@ struct Node *findIntersection(struct Node *head1, struct Node *head2)
     return intersection;
 }
 
-void printList(struct Node *head)
-{
-    while (head)
-    {
-        printf("%d -> ", head->data);
-        head = head->next;
-    }
-    printf("NULL\n");
-}
+// void printList(struct Node *head)
+// {
+//     while (head)
+//     {
+//         printf("%d -> ", head->data);
+//         head = head->next;
+//     }
+//     printf("NULL\n");
+// }
 
 int main()
 {
@@ -96,10 +96,10 @@ int main()
 
     struct Node *head2 = newNode8;
 
-    printf("List 1: ");
-    printList(head1);
-    printf("List 2: ");
-    printList(head2);
+    // printf("List 1: ");
+    // printList(head1);
+    // printf("List 2: ");
+    // printList(head2);
 
     struct Node *intersection = findIntersection(head1, head2);
 
