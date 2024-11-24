@@ -1,19 +1,17 @@
 #include <stdio.h>
-void select(int arr[], int n)
+void bubble_sort(int arr[], int n)
 {
-    for (int i = 0; i <= n - 2; i++)
+    for (int i = n - 1; i >= 0; i--)
     {
-        int mini = i;
-        for (int j = i; j <= n - 1; j++)
+        for (int j = 0; j <= i - 1; j++)
         {
-            if (arr[j] < arr[mini])
+            if (arr[j] > arr[j + 1])
             {
-                mini = j;
+                int temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
             }
         }
-        int temp = arr[mini];
-        arr[mini] = arr[i];
-        arr[i] = temp;
     }
 }
 int main()
@@ -25,7 +23,7 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    select(arr, n);
+    bubble_sort(arr, n);
     for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
