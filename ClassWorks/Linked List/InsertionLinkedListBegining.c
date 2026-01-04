@@ -44,7 +44,7 @@ int main()
     }
     insertNode = (struct node *)malloc(sizeof(struct node));
     insertNode->data = 30;
-    insertNode->next = NULL;
+    //insertNode->next = NULL;
     insertNode->next = head;
     head = insertNode;
     ptr = head;
